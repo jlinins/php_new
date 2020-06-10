@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Php</title>
-</head>
-<body>
-<h1>Simple HTML</h1>
 <?php
-echo "<div class='myclass'> Anything goes here </div> "
-?>
-<h2>Heading2 </h2>
-<?php
-for ($i =0; $i<5; $i++){
-    echo "<p>Paragraph no $i</p>";
-}
-?>
-<footer>Not done by html</footer>
+require_once("../src/templates/header.php");
+require_once("../src/utilities.php");
 
-    
-</body>
-</html>
+echo "<h1> My PHP PAGE</h1>";
+$arr=["Janis", "Bite", "Resnis"];
+makeUnorderedList($arr);
+
+
+echo"<div class='results'>". myAdder(50, 200) ." </div>";
+require_once("../src/templates/footer.html");
